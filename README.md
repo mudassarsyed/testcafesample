@@ -76,7 +76,7 @@ export BROWSERSTACK_USE_AUTOMATE="1"
 
 export TESTCAFE_BROWSERSTACK_API_POLLING_INTERVAL="40000"
 
-export BROWSERSTACK_CAPABILITIES_CONFIG_PATH="/Users/mudassarsyed/Documents/nespresso/testcafe-cucumber/browserstack -config.json"
+export BROWSERSTACK_CAPABILITIES_CONFIG_PATH="./testcafe-cucumber/browserstack -config.json"
 
 
 
