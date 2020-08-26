@@ -3,15 +3,19 @@ const createTestCafe = require('testcafe');
 const testControllerHolder = require('../support/testControllerHolder');
 const {AfterAll, setDefaultTimeout, Before, After, Status} = require('cucumber');
 const errorHandling = require('../support/errorHandling');
-const TIMEOUT = 120000;
+let n = Math.floor(Math.random() * 100); 
+const TIMEOUT = n * 180000;
 
 let isTestCafeError = false;
 let attachScreenshotToReport = null;
 let cafeRunner = null;
-let n = 0;
+
+let testfile= "test"+n+".js";
+let testfilesrc="./"+testfile;
+console.log(testfile);
 
 function createTestFile() {
-    fs.writeFileSync('test.js',
+    fs.writeFileSync(testfile,
         'import errorHandling from "./features/support/errorHandling.js";\n' +
         'import testControllerHolder from "./features/support/testControllerHolder.js";\n\n' +
 
@@ -27,7 +31,7 @@ function runTest(iteration, browser) {
             cafeRunner = tc;
             const runner = tc.createRunner();
             return runner
-                .src('./test.js')
+                .src(testfilesrc)
                 .screenshots('reports/screenshots/', true)
                 .browsers(browser)
                 .run()
@@ -52,7 +56,7 @@ Before(function() {
 });
 
 After(function() {
-    fs.unlinkSync('test.js');
+    fs.unlinkSync(testfile);
     testControllerHolder.free();
 });
 

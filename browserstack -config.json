@@ -1,0 +1,7 @@
+{
+    "browserstack.idleTimeout": "180",
+    "browserstack.debug": "true",
+    "project": "Nespresso",
+    "build": "Build 26",
+    "name": "single_test"
+}

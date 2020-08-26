@@ -65,3 +65,28 @@ Thanks to everyone who has contributed to this project over the last few years.
 
 [<img alt="cmasekar" src="https://avatars0.githubusercontent.com/u/6192576?s=460&v=4" width="115">](https://github.com/cmasekar) |[<img alt="benkirbyten10" src="https://avatars0.githubusercontent.com/u/29120362?s=460&v=4" width="115">](https://github.com/benkirbyten10) |[<img alt="vvedachalam" src="https://avatars1.githubusercontent.com/u/7630355?s=460&v=4" width="115">](https://github.com/vvedachalam) |[<img alt="azzra" src="https://avatars3.githubusercontent.com/u/9268494?s=460&v=4" width="115">](https://github.com/azzra) |
 :---: |:---: |:---: |:---: |
+
+
+My Required Exports
+export BROWSERSTACK_USERNAME="bsusername"
+
+export export BROWSERSTACK_ACCESS_KEY="bspassword"
+
+export BROWSERSTACK_USE_AUTOMATE="1"
+
+export TESTCAFE_BROWSERSTACK_API_POLLING_INTERVAL="40000"
+
+export BROWSERSTACK_CAPABILITIES_CONFIG_PATH="/Users/mudassarsyed/Documents/nespresso/testcafe-cucumber/browserstack -config.json"
+
+
+
+
+  Scenario: Failing scenario
+    Given I am open Google's search page
+    When I am typing my search request "github TestCafe" on Google
+    Then I press the "enter" key on Google
+    Then I should see that the first Google's result is "kittens"
+
+
+
+
