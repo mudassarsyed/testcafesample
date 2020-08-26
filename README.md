@@ -77,16 +77,3 @@ export BROWSERSTACK_USE_AUTOMATE="1"
 export TESTCAFE_BROWSERSTACK_API_POLLING_INTERVAL="40000"
 
 export BROWSERSTACK_CAPABILITIES_CONFIG_PATH="./testcafe-cucumber/browserstack -config.json"
-
-
-
-
-  Scenario: Failing scenario
-    Given I am open Google's search page
-    When I am typing my search request "github TestCafe" on Google
-    Then I press the "enter" key on Google
-    Then I should see that the first Google's result is "kittens"
-
-
-
-
